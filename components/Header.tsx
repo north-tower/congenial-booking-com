@@ -2,9 +2,14 @@
 
 import Link from "next/link";
 import { Fragment, useState } from "react";
-import { Bars3Icon , ChatBubbleLeftIcon, ChevronDownIcon, PaperAirplaneIcon, PhoneIcon, PlayCircleIcon, XMarkIcon} from "@heroicons/react/24/solid";
-import { Dialog, Disclosure, Popover, Transition } from "@headlessui/react"
-import { HomeIcon } from "lucide-react";
+import { Bars3Icon , ChatBubbleLeftIcon, HomeIcon, 
+    PaperAirplaneIcon,
+    ChevronDownIcon, 
+    PhoneIcon, PlayCircleIcon,
+     XMarkIcon} from "@heroicons/react/24/solid";
+import { Dialog, Disclosure, Popover, Transition } from
+ "@headlessui/react"
+
 
 
 function Header() {
@@ -16,7 +21,7 @@ function Header() {
             name: "Book a Stay",
             description: "Get a better understanding of your traffic",
             href: "#",
-            icon: HomeIcon,
+            icon: HomeIcon, 
 
         },
         {
@@ -72,7 +77,7 @@ function Header() {
             </div>
 
             <Popover.Group className="hidden lg:flex lg:gap-x-12">
-                <Popover className="reletive">
+                <Popover className="relative">
                     <Popover.Button className="flex items-center
                     gap-x-1 text-sm font-semibold leading-6 text-white">
                         Stays
@@ -88,7 +93,8 @@ function Header() {
                     leaveFrom="opacity-100 translate-y-0"
                     leaveTo="opacity-0 translate-y-1" >
 
-                        <Popover.Panel className="absolute bg-white -left-8 top-full z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl shadow-lg ring-1 ring-gray-900/5">
+                        <Popover.Panel 
+                        className="absolute bg-white -left-8 top-full z-10 mt-3 w-screen max-w-md overflow-hidden rounded-3xl shadow-lg ring-1 ring-gray-900/5">
                             <div className="p-4">
                                 {products.map((item) => (
                                     <div key={item.name}
