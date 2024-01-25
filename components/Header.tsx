@@ -108,6 +108,13 @@ function Header() {
                                         aria-hidden="true" />
                                        
                                         </div>
+                                        <div className="flex-auto">
+                                        <a href={item.href} 
+                                        className="block 
+                                        font-semibold text-[#013B94]"> {item.name} <span className="absolute inset-0" />
+                                        </a>
+                                        <p className="mt-1 text-[#013B94]">{item.description}</p>
+                                        </div>
                                         </div>
                                 ))}
                             </div>
