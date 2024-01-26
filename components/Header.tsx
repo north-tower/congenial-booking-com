@@ -9,6 +9,7 @@ import { Bars3Icon , ChatBubbleLeftIcon, HomeIcon,
      XMarkIcon} from "@heroicons/react/24/solid";
 import { Dialog, Disclosure, Popover, Transition } from
  "@headlessui/react"
+import { cn } from "@/lib/utils";
 
 
 
@@ -119,7 +120,7 @@ function Header() {
                                 ))}
                             </div>
 
-                            <div className="grid grid-cols-2 divide-x divide-gray-900/5 bg-gray-500">
+                            <div className="grid grid-cols-2 divide-x divide-gray-900/5 ">
                                 {callsToAction.map((item) => (
                                     <a key={item.name}
                                     href={item.href}
@@ -186,13 +187,45 @@ function Header() {
                             <Disclosure className="-mx-3" as="div" > 
                                     {( {open} )  => (
                                         <>
-                                            <Disclosure.Button className="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base font-semibold leading-7 text-white hover:bg-blue-800">
+                                            <Disclosure.Button className="flex w-full items-center justify-between rounded-lg py-2 pl-3 pr-3.5 text-base 
+                                            font-semibold leading-7 text-white hover:bg-blue-800">
                                                 Stays
-                                                    <ChevronDownIcon className={cn ( open ? "rotate-180" : "", "h-5 w-5 flex-none")} />                                                <ChevronDownIcon className=""
+                                                    <ChevronDownIcon className={cn( open ? "rotate-180" : "", "h-5 w-5 flex-none")} aria-hidden="true" />                                               
                                             </Disclosure.Button>
+                                            <Disclosure.Panel className="mt-2 space-y-2">
+                                                {[...products, ...callsToAction].map((item) => (
+                                                    <Disclosure.Button 
+                                                    key={item.name}
+                                                    as="a"
+                                                    href={item.href}
+                                                    className="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-white hover:bg-blue-800"
+                                                    >
+                                                        {item.name}
+                                                    </Disclosure.Button>
+                                                ))}
+                                            </Disclosure.Panel>
                                         </>
                                     )}
                             </Disclosure>
+                            <a href="#"
+                            className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-blue-800">
+                                Flights</a> 
+                                <a href="#"
+                            className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-blue-800">
+                                Car Rentals</a> 
+                                <a href="#"
+                            className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-blue-800">
+                                Attractions</a> 
+                                <a href="#"
+                            className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-white hover:bg-blue-800">
+                                Flight + Hotel</a> 
+                                
+                        </div>
+
+                        <div className="py-6">
+                            <a href="#" className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-white hover:bg-blue-800">
+                                Log in
+                            </a>
                         </div>
                     </div>
                 </div>
