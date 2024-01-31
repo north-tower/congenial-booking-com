@@ -27,7 +27,7 @@ async function SearchPage({ searchParams }: Props) {
 
 
   return (
-    <div>page</div>
+    <div>pagegg</div>
   )
 }
 
