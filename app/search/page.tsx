@@ -69,7 +69,7 @@ async function SearchPage({ searchParams }: Props) {
                   </div>
 
                   <p className="flex items-center justify-center font-bold text-sm w-10 h-10 text-white bg-blue-900 rounded-lg flex-shrink-0">
-                    item.rating || "NA"
+                    item.rating  NA
                   </p>
                 </div>
 
