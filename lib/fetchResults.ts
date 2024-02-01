@@ -134,7 +134,7 @@ export async function fetchResults(searchParams: SearchParams) {
     body: JSON.stringify(body),
     next: {
         revalidate: 60 * 60,
-    }  ,
+    },
     headers: {
         "Content-Type": "application/json",
         Authorization: "Basic " + Buffer.from(`${username}:${password}`).toString("base64"),
@@ -145,8 +145,7 @@ export async function fetchResults(searchParams: SearchParams) {
     if (data.results.length === 0) return;
     const result: Result = data.results[0];
     return result;
-})
-.catch((err) => console.log(err));
+}).catch((err) => console.log(err));
 
 return response;
 };

@@ -78,7 +78,7 @@ function SearchForm() {
 
   return (
     <Form {...form}>
-        <form onSubmit={form.handleSubmit(onSubmit)} className="flex flex-col lg:flex-row lg:max-w-6xl lg:max-auto items-center justify-center space-x-0 lg:space-x-2
+        <form onSubmit={form.handleSubmit(onSubmit)} className="flex flex-col lg:flex-row lg:max-w-7xl lg:mx-auto items-center justify-center space-x-0 lg:space-x-2
         space-y-4 lg:space-y-0 rounded-lg">
             <div className="grid w-full lg:max-w-sm items-center gap-1.5">
                 <FormField control={form.control} name="location" render={({field}) => (
